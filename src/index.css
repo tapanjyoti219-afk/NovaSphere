@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #172033;
+  background: #f5f7fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  background: #10182b;
+  color: white;
+  padding: 22px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.header span {
+  color: #b8c5dc;
+  font-size: 13px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #10182b, #263e72, #51418c);
+  color: white;
+  text-align: center;
+  padding: 85px 20px;
+  border-radius: 0 0 30px 30px;
+}
+
+.tag {
+  color: #a8c5ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 6vw, 52px);
+  max-width: 750px;
+  margin: 20px auto;
+}
+
+.hero > p:not(.tag) {
+  color: #d6def0;
+  line-height: 1.7;
+}
+
+.search {
+  display: flex;
+  max-width: 600px;
+  margin: 30px auto 0;
+  padding: 6px;
+  background: white;
+  border-radius: 14px;
+  gap: 8px;
+}
+
+.search input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  padding: 13px;
+  color: #172033;
+}
+
+.search button,
+.card button {
+  border: none;
+  background: #315fce;
+  color: white;
+  padding: 13px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.categories,
+.latest {
+  max-width: 1100px;
+  margin: 55px auto;
+  padding: 0 20px;
+}
+
+.categories h2,
+.latest h2 {
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  border: 1px solid #e6eaf2;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(20, 40, 80, 0.05);
+}
+
+.card > span {
+  font-size: 35px;
+}
+
+.card h3 {
+  font-size: 21px;
+}
+
+.card p,
+.latest p {
+  color: #647087;
+  line-height: 1.7;
+}
+
+.card button {
+  margin-top: 12px;
+}
+
+.latest {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+footer {
+  background: #10182b;
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+footer p {
+  color: #aebbd0;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 18px 20px;
+  }
+
+  .hero {
+    padding: 65px 18px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .search button {
+    padding: 12px;
+  }
+}
